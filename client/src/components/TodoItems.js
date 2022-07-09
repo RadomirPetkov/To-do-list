@@ -1,11 +1,17 @@
-export const TodoItem = (props) =>{
+export const TodoItem = (props) => {
+    let className = "todo"
+
+    if (props.isCompleted) {
+        className = `todo is-completed`
+    }
+
     return (
-        <tr className="todo is-completed">
-                  <td>Give dog a bath</td>
-                  <td>Complete</td>
-                  <td className="todo-action">
-                    <button className="btn todo-btn">Change status</button>
-                  </td>
-                </tr>
+        <tr className={className}>
+            <td>{props.name}</td>
+            <td>Complete</td>
+            <td className="todo-action">
+                <button className="btn todo-btn">Change status</button>
+            </td>
+        </tr>
     )
 }
