@@ -29,7 +29,6 @@ export const TodoList = () => {
                     </tr>
                 </thead>
                 <tbody>
-
             {list?.map(x=> <TodoItem key={x._id} {...x}/>)}
 
                 </tbody>

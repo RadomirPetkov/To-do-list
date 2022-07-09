@@ -8,7 +8,7 @@ export const TodoItem = (props) => {
     return (
         <tr className={className}>
             <td>{props.name}</td>
-            <td>Complete</td>
+            <td>{props.isCompleted ? "Completed" : "Incompleted"}</td>
             <td className="todo-action">
                 <button className="btn todo-btn">Change status</button>
             </td>
